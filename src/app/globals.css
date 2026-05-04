@@ -3,25 +3,91 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #f4f6f9;
+  --foreground: #0f172a;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
+/* Page fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.page-fade-in {
+  animation: fadeIn 0.25s ease-out both;
+}
+
+/* Drawer slide-in from right */
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+.drawer-slide-in {
+  animation: slideInRight 0.22s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Thin custom scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* react-big-calendar overrides */
+.rbc-calendar {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 13px;
+}
+.rbc-header {
+  padding: 10px 6px;
+  font-weight: 600;
+  color: #64748b;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid #f1f5f9;
+}
+.rbc-month-view, .rbc-time-view {
+  border-color: #f1f5f9;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.rbc-day-bg + .rbc-day-bg { border-left-color: #f1f5f9; }
+.rbc-off-range-bg { background: #f8fafc; }
+.rbc-toolbar { margin-bottom: 16px; }
+.rbc-toolbar button {
+  color: #374151;
+  border-color: #e5e7eb;
+  border-radius: 8px;
+  font-size: 13px;
+  padding: 5px 12px;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+.rbc-toolbar button:hover { background: #f8fafc; border-color: #d1d5db; }
+.rbc-toolbar button.rbc-active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+  box-shadow: 0 1px 3px rgba(37,99,235,.35);
+}
+.rbc-toolbar button.rbc-active:hover { background: #1d4ed8; }
+.rbc-today { background-color: #eff6ff; }
+.rbc-event {
+  border-radius: 6px !important;
+  font-size: 12px !important;
+  padding: 2px 7px !important;
+  font-weight: 500 !important;
+  border: none !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+.rbc-show-more { color: #2563eb; font-size: 12px; font-weight: 600; }
+
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  .text-balance { text-wrap: balance; }
 }
