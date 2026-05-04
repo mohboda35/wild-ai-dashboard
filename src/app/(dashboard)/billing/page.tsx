@@ -49,7 +49,7 @@ export default function BillingPage() {
     } else if (profile.business_id) {
       setSelectedBizId(profile.business_id)
     }
-  }, [profile, isSuperAdmin])
+  }, [profile, isSuperAdmin, selectedBizId])
 
   const loadBillingData = useCallback(async (bizId: string) => {
     if (!bizId) return
@@ -64,8 +64,6 @@ export default function BillingPage() {
 
     // Fetch this month's usage from Retell
     try {
-      const res = await fetch(`/api/retell/usage?period=today`)
-      // Actually use month start
       const now = new Date()
       const monthStart = new Date(now.getFullYear(), now.getMonth(), 1).toISOString()
       const monthRes = await fetch(`/api/retell/usage?since=${encodeURIComponent(monthStart)}`)
