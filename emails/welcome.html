@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Welcome to Wild AI — Your Dashboard is Ready 🎉</title>
+</head>
+<body style="margin:0;padding:0;background-color:#f4f6f9;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+
+  <!-- Outer wrapper -->
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f4f6f9;">
+    <tr>
+      <td align="center" style="padding:48px 20px;">
+
+        <!-- Main card -->
+        <table width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;width:100%;background-color:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 4px 32px rgba(0,0,0,0.08);">
+
+          <!-- Header -->
+          <tr>
+            <td style="background-color:#0a0f1e;padding:28px 40px;">
+              <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="background-color:#2563eb;width:32px;height:32px;border-radius:8px;text-align:center;vertical-align:middle;">
+                    <span style="color:#ffffff;font-size:16px;font-weight:800;font-family:sans-serif;line-height:32px;display:block;">W</span>
+                  </td>
+                  <td style="padding-left:10px;vertical-align:middle;">
+                    <span style="color:#ffffff;font-size:20px;font-weight:700;letter-spacing:-0.3px;">Wild AI</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding:44px 40px 36px;">
+
+              <!-- Hero text -->
+              <h1 style="margin:0 0 12px;font-size:26px;font-weight:700;color:#0f172a;letter-spacing:-0.5px;line-height:1.3;">
+                Welcome aboard, {{ .Name }}! 👋
+              </h1>
+              <p style="margin:0 0 32px;font-size:16px;color:#64748b;line-height:1.7;">
+                Your Wild AI voice agent dashboard has been set up and is ready to go. Click below to set your password and access your dashboard.
+              </p>
+
+              <!-- CTA Button -->
+              <table cellpadding="0" cellspacing="0" border="0" style="margin:0 0 20px;">
+                <tr>
+                  <td style="background-color:#2563eb;border-radius:10px;">
+                    <a href="{{ .ConfirmationURL }}" style="display:block;padding:15px 32px;color:#ffffff;font-size:15px;font-weight:600;text-decoration:none;letter-spacing:0.1px;">
+                      Set Your Password &amp; Log In →
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Expiry note -->
+              <p style="margin:0 0 32px;font-size:13px;color:#94a3b8;">
+                This link expires in 24 hours.
+              </p>
+
+              <!-- Divider -->
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:28px;">
+                <tr>
+                  <td style="border-top:1px solid #e2e8f0;font-size:0;">&nbsp;</td>
+                </tr>
+              </table>
+
+              <!-- Info box -->
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="background-color:#eff6ff;border-radius:10px;border:1px solid #bfdbfe;padding:20px 22px;">
+                    <p style="margin:0 0 6px;font-size:12px;font-weight:600;color:#1d4ed8;text-transform:uppercase;letter-spacing:0.06em;">
+                      What your dashboard includes
+                    </p>
+                    <p style="margin:0;font-size:14px;color:#1e40af;line-height:1.7;">
+                      Your dashboard gives you real-time visibility into every call your AI agent handles — bookings, missed opportunities, call transcripts, and more.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background-color:#f8fafc;padding:24px 40px;border-top:1px solid #e2e8f0;border-radius:0 0 16px 16px;text-align:center;">
+              <p style="margin:0 0 6px;font-size:13px;color:#94a3b8;font-weight:500;">
+                Powered by Wild AI
+              </p>
+              <p style="margin:0;font-size:12px;color:#cbd5e1;">
+                &copy; 2026 Wild AI. All rights reserved.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+        <!-- /Main card -->
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
